@@ -8,7 +8,7 @@ import openai
 
 
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 openai.api_key = os.environ["OPENAI_API_KEY"]
 # define prompt helper
 max_input_size = 4096
