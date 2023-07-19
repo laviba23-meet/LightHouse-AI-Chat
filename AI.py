@@ -3,11 +3,13 @@ from langchain.chat_models import ChatOpenAI
 
 import gradio as gr
 import os
-
+import sys
 import openai
 
-os.environ["OPENAI_API_KEY2"] = "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"
-openai.api_key = os.environ["OPENAI_API_KEY2"]
+
+
+os.environ["OPENAI_API_KEY"] = "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"
+openai.api_key = os.environ["OPENAI_API_KEY"]
 # define prompt helper
 max_input_size = 4096
 num_output = 512 # number of output tokens
@@ -46,7 +48,8 @@ def chatbot(input_text):
 iface = gr.Interface(fn=chatbot,
 inputs=gr.Textbox(lines=7, label="Enter your text"),
 outputs="text",
-title="Custom-trained AI Chatbot")
+title="Aurora")
 
-index = construct_index(r"C:\Users\lavib\OneDrive\Desktop\Aurora\docs") #comment out after 1st run if training docs aren’t changing
+
+index = construct_index("docs")
 iface.launch(share=True)
