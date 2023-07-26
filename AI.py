@@ -1,5 +1,5 @@
 from llama_index import SimpleDirectoryReader, LLMPredictor, GPTVectorStoreIndex, PromptHelper, ServiceContext, load_index_from_storage, StorageContext
-from langchain.chat_models import ChatOpenAI
+from langchain import ChatOpenAI
 
 import gradio as gr
 import os
